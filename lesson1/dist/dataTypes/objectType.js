@@ -30,3 +30,11 @@ var upperCase = function (a) {
     }
     a.toString().toUpperCase();
 };
+// interface User {
+//  username:string,
+//  password:string,
+//  email:string,
+//  login: ()=>{}
+//  logout:()=>{}
+// }
+//dùng Type

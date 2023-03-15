@@ -1,0 +1,1 @@
+enum ROLE {STAFF, MANAGER, USER}
