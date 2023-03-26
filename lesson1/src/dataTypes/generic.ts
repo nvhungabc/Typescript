@@ -49,6 +49,15 @@ const arrStr3=["a","h","c","l"]
 // selectSort(arrNum3)
 // console.log(arrNum3);
 function selection<T>(arr:T[],callBack:(item:T,item2:T)=>number):T[]{
+  if(!callBack){
+    callBack=(a:T,b:T):number=>{
+      if(a>b){
+        return 1
+      }else{
+        return -1
+      }
+    }
+  }
     for(let i=0;i<arr.length-1;i++){
     for(let j=i+1;j<arr.length;j++){
         if(callBack(arr[j],arr[i])<0){
@@ -63,11 +72,13 @@ function ascendingOrder(item: number, item2: number): number {
   }
   selection(arrNum3, ascendingOrder);
   console.log(arrNum3);
+  const result= selection(arrStr3,(item,item2)=>{
+    return item.localeCompare(item2)
+
+  })
+  console.log(result);
+  
 //   arrStr1.sort();
-  
-  arrStr3.sort().reverse();
-  console.log(arrStr3);
-  
 
 // arrNum3.sort((a,b)=>(a-b));
 // console.log(arrNum3);

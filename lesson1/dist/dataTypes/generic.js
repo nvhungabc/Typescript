@@ -49,6 +49,16 @@ var arrStr3 = ["a", "h", "c", "l"];
 // console.log(arrNum3);
 function selection(arr, callBack) {
     var _a;
+    if (!callBack) {
+        callBack = function (a, b) {
+            if (a > b) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        };
+    }
     for (var i = 0; i < arr.length - 1; i++) {
         for (var j = i + 1; j < arr.length; j++) {
             if (callBack(arr[j], arr[i]) < 0) {
@@ -63,9 +73,11 @@ function ascendingOrder(item, item2) {
 }
 selection(arrNum3, ascendingOrder);
 console.log(arrNum3);
+var result = selection(arrStr3, function (item, item2) {
+    return item.localeCompare(item2);
+});
+console.log(result);
 //   arrStr1.sort();
-arrStr3.sort().reverse();
-console.log(arrStr3);
 // arrNum3.sort((a,b)=>(a-b));
 // console.log(arrNum3);
 // arrStr3.sort((a,b)=>a.localeCompare(b))
