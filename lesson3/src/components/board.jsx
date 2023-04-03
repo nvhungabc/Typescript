@@ -1,17 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Square from "./squase"
+
 const Board = ({ children }) => {
     const [game, setGame] = useState([null, null, null, null, null, null, null, null, null])
     const [player, setplayer] = useState(true)
+    const [timer,setTimer]=useState(3)
     const handlePlay = (position) => {
         const newGame = game.map((g, index) => {
             if (index === position) {
                 return player ? "X" : "O"
+                
             }
             return g
         })
+        if(checkWinner()){
+            return true
+        }
         setGame(newGame)
         setplayer(!player)
+    }
+    const handleAutoPlay = () => {
+        const emptyGame = game.map((square, index) => square ? null : index).filter(item => item != null)
+        const position = emptyGame[Math.floor(Math.random()*emptyGame.length)];
+        handlePlay(position)
+        setTimer(3)
     }
     const listWinner = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
@@ -25,14 +37,26 @@ const Board = ({ children }) => {
         }
         return null;
     }
+    useEffect(() => {
+        if (timer < 0) {
+            handleAutoPlay()
+        }
+
+        const interval = setInterval(() => {
+            setTimer(timer - 1)
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [timer])
+
     const handleReset = () => {
         setGame([null, null, null, null, null, null, null, null, null])
     }
     const winner = checkWinner()
     return <><h2 className="border-3 m-5"> ❌⭕ TIC TAC TOE ⭕❌</h2>
-
+<h2>Time:{timer}</h2>
         <div className="bg-cyan-100 rounded-xl m-0.5	">
-            <h2 className="text-center m-2">Winner is: {checkWinner()}</h2>
+           
             <div className="grid grid-cols-3 gap-2 w-[240px] m-10	">
                 <Square value={game[0]} position={0} handlePlay={handlePlay} />
                 <Square value={game[1]} position={1} handlePlay={handlePlay} />
@@ -51,8 +75,10 @@ const Board = ({ children }) => {
                 :
                 <p>No winner yet</p>
             }
-        {winner == null &&
-            <button onClick={handleReset} className="text-center bg-rose-500 rounded-xl py-3 px-5 m-3">Reset</button>
+        {winner == null ?
+            <button onClick={handleReset} className="text-center bg-rose-500 rounded-xl py-3 px-5 m-3">Reset</button>:
+            <h2 className="text-center bg-rose-500 rounded-xl py-3 px-5 m-3">Winner is: {checkWinner()}</h2>
+            
         }
 
     </>
