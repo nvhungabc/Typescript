@@ -1,81 +1,71 @@
-const Add =()=>{
-    return<>
-    <h2 className="text-lg ml-24 py-4 font-semibold text-gray-800">Product Name</h2>
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
+const AddProducts_Admin = () => {
 
-    <hr className="" />
-    <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    return <>
+        <div className="flex flex-col md:flex-row w-full">
 
+            <div className="md:w-2/5 p-4">
+                <h2 className="text-xl font-bold mb-4">Thêm ảnh sản phẩm</h2>
+                <div className="bg-gray-50 h-64 rounded-lg flex items-center justify-center">
 
-
-        <div className="lg:flex  lg:justify-between">
-            <div className="flex-1 min-w-0">
-
-                <img className=" w-[358px] object-cover lg:h-full lg:w-96" src="/phone1.png" alt="Product Image" />
+                    <span className="text-gray-400">
+                    <i className="cursor-grab"><FontAwesomeIcon icon={faSquarePlus} size="3x" style={{ color: "#1b97b6", }} /></i>
+                    </span>
+                </div>
+                <span>Mô tả ngắn</span>
+                <input type="text" placeholder="Mô tả ngắn" className="mt-4 p-2 rounded-lg border border-gray-300 w-full" />
             </div>
-            <div className=" flex lg:mt-0 lg:ml-10 ">
-                <div className="max-w-2xl flex flex-col justify-between">
-                    <div className="mt-4">
-                        <span className="mt-1 text-2xl  font-semibold text-red-500">10.790.000 ₫</span>   <span className="mt-1 ml-1 text-sm font-semibold text-gray-500">18.000.000 ₫</span>
-                        <p className=" text-sm font-sans text-gray-600 mt-5"> Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.</p>
+            <div className="w-full">
+                <h1 className="text-lg mt-7">Thông tin sản phẩm</h1>
+                <hr className="my-4" />
+                <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-name">
+                        Tên sản phẩm
+                    </label>
+                    <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-name" type="text" placeholder="Nhập tên sản phẩm" />
+                </div>
+                <div className="price flex">
+                    <div className="w-full md:w-1/2 px-3">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-price">
+                            Giá gốc sản phẩm
+                        </label>
+                        <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-price" type="number" placeholder="Nhập giá gốc sản phẩm" />
                     </div>
-
+                    <div className="w-full md:w-1/2 px-3">
+                        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-price">
+                            Giá Khuyến Mãi
+                        </label>
+                        <input className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-price" type="number" placeholder="Giá Khuyến Mãi" />
+                    </div>
                 </div>
+                <div className="w-full md:w-1/2 px-3">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-category">
+                        Danh mục sản phẩm
+                    </label>
+                    <select className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-category">
+                        <option value="">Chọn danh mục sản phẩm</option>
+                        <option value="category1">Danh mục sản phẩm 1</option>
+                        <option value="category2">Danh mục sản phẩm 2</option>
+                        <option value="category3">Danh mục sản phẩm 3</option>
+                    </select>
+                </div>
+                <div className="w-full px-3 mb-6 md:mb-0">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-description">
+                        Đặc Điểm Nổi Bật
+                    </label>
+                    <textarea rows={4} className="appearance-none block w-full   text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-description" placeholder="Nhập Đặc Điểm Nổi Bật"></textarea>
+                </div>
+                <div className="w-full px-3 mb-6 md:mb-0">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="product-description">
+                        Mô tả dài
+                    </label>
+                    <textarea rows={4} className="appearance-none block w-full  text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="product-description" placeholder="Nhập mô tả dài"></textarea>
+                </div>
+                <button className="bg-[#00B0D7] hover:bg-blue-400 p-2 rounded-md">Thêm Mới</button>
             </div>
-        </div>
-        <div className="mt-10 ml-24 flex">
+        </div >
+    </>
+}
 
-            <div className="flex -mx-2">
-                <div className="w-1/12 h-12 w-12 ">
-                    <img className=" w-full object-cover cursor-pointer" src="/phone1.png" alt="Thumbnail 1" />
-                </div>
-                <div className="w-1/12 w-12 h-12">
-                    <img className=" w-full  object-cover cursor-pointer" src="/phone2.png" alt="Thumbnail 2" />
-                </div>
-                <div className="w-1/12 h-12 w-12 ">
-                    <img className=" w-full object-cover cursor-pointer" src="/phone3.png" alt="Thumbnail 3" />
-                </div>
-                <div className="w-1/12 h-12 w-12 ">
-                    <img className=" w-full object-cover cursor-pointer" src="/phone4.png" alt="Thumbnail 4" />
-                </div>
-            </div>
-            <div className="grid grid-cols-2 w-96 m-auto">
-                <div className="">
-
-                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold text-sm py-2 px-14 rounded">
-                        Mua ngay
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-        <div className="flex flex-col mt-10   bg-gray-100 p-4">
-            <h1 className="text-red-500 text-lg font-bold mb-4 justify-center text-center">ĐẶC ĐIỂM NỔI BẬT</h1>
-            <p className="text-sm mt-3">Camera chất lượng, bắt trọn từng khoảng khắc - Cụm 4 camera với cảm biến chính lên đến 108 MP</p>
-            <p className="text-sm mt-3">Thưởng thức không gian giải trí cực đỉnh - Màn hình lớn 6.7 inch, độ phân giải Full HD+, 120Hz mượt mà</p>
-            <p className="text-sm mt-3">Cấu hình Galaxy A73 5G được nâng cấp mạnh với chip Snapdragon 778G, RAM lên đến 8 GB</p>
-            <p className="text-sm mt-3">Chiến game thoải mái không lo gián đoạn - Viên pin lớn 5000 mAh, hỗ trợ sạc nhanh 25 W</p>
-        </div>
-        <div className='my-10'>
-            <p>Năm 2022 hứa hẹn sẽ là một năm rất đáng trông đợi đối với những ai là fan của thương hiệu điện thoại Samsung. Mới đây, hãng sẽ tiếp tục cho ra mắt nhiều smartphone với sự cải tiến trong thiết kế và cấu hình, trong đó phải kể đến chiếc Samsung Galaxy A73 với nhiều cải tiến so với thế hệ trước. Vậy sản phẩm có gì nổi bật, giá bao nhiêu và liệu có nên mua không? Tìm hiểu ngay nhé!</p>
-        </div>
-        <h3 className='text-xl mt-5'>Đánh giá Samsung A73 - Hiệu năng mượt mà, chụp ảnh chuyên nghiệp</h3>
-        <div className='my-2'>
-            <p>Điện thoại cao cấp nhất dòng Galaxy A series sở hữu nhiều nâng cấp đáng giá so với thế hệ trước, từ ngoại hình cho đến hiệu năng, đặc biệt là hệ thống camera. Sau đây là những đánh giá chi tiết về chiếc</p>
-        </div>
-        <h3 className='text-xl mt-10'>Thiết kế sang trọng, màn hình Super AMOLED</h3>
-        <div className='my-2'>
-            <p>Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.</p>
-        </div>
-        <div className='my-3'>
-            <p>Samsung Galaxy A73 được thiết kế gọn nhẹ với tiêu chí đáp ứng khả năng mang theo để tiện đi lại cho người dùng. Giờ đây, bạn có thể mang theo chiếc smartphone bên cạnh đến bất cứ đâu, bất cứ lúc nào.</p>
-            <p className='mt-5'>Kích thước và trọng lượng của chiếc điện thoại rất vừa phải và dĩ nhiên sẽ không chiếm quá nhiều diện tích trong túi xách và có thể di chuyển dễ dàng.</p>
-        </div>
-    </div>
-    <div className='text-center '>
-        <button className='text-xl border-gray-500 border-2 px-20	rounded-xl 	'>Xem Thêm</button>
-        </div>
-</>
-    
-    }
-    export default Add
+export default AddProducts_Admin

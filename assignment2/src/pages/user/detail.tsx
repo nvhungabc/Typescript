@@ -1,5 +1,5 @@
 
-import { IProduct } from "../../interfaces/model"
+import { IProduct } from "../../interfaces/products"
 import { useState, useEffect } from "react"
 import { Link, useParams } from "react-router-dom"
 import { getById } from "../../api/product"
@@ -62,10 +62,10 @@ const Products_detail = () => {
 
                         <div className="mt-4">
                             {/* Giá sản phẩm */}
-                            <span className="mt-1 text-2xl  font-semibold text-red-500">{product.price}.đ</span>
+                            <span className="mt-1 text-2xl  font-semibold text-red-500">{product.price.toLocaleString()} đ</span>
                             {/* Giá cũ của sản phẩm */}
 
-                            <span className="mt-1 ml-10 text-sm font-semibold text-gray-500">{product.original_price}.đ</span>
+                            <span className="mt-1 ml-10 text-sm font-semibold text-gray-500">{product.original_price.toLocaleString()} đ</span>
                             {/* Mô tả sản phẩm */}
                             <p className=" text-sm font-sans text-gray-600">{ }</p>
                         </div>

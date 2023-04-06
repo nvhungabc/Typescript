@@ -9,17 +9,17 @@ import Dashbroad from './pages/admin/dashbroad'
 import Add from './pages/admin/add'
 import Update from './pages/admin/update'
 import AdminLayout from './componets/adminlayout'
-
 function App() {
   return <BrowserRouter>
     <Routes>
       <Route path='/' element={<UserLayout />}>
         <Route index element={<Home />} />
-        <Route path='detail/:id' element={<Products_detail />}/>
+        <Route path='products-detail/:id' element={<Products_detail />}/>
       </Route>
       <Route path='/admin' element={<AdminLayout />}>
-      <Route index element={<Dashbroad/>} />
-
+        <Route index path='/admin' element={<Dashbroad />} />
+        <Route path='add-products' element={<Add />} />
+        <Route path='edit-products/:id' element={<Update />} />
       </Route>
       <Route path='/login' element={<Login />}></Route>
       <Route path='/signin' element={<Signin />}></Route>

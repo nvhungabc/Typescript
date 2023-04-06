@@ -1,7 +1,7 @@
-import Product from "../../componets/user/product"
+import Product from "../../pages/user/product"
 import Slider from "../../componets/user/slider"
 import { useEffect,useState } from "react"
-import { IProduct } from "../../interfaces/model"
+import { IProduct } from "../../interfaces/products"
 import { getAll } from "../../api/product"
 const Home = () => {
     const [products, setProducts] = useState<IProduct[]>([])

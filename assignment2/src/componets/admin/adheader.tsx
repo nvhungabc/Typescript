@@ -12,7 +12,7 @@ const Header = (props: Props) => {
         />
       </div>
 
-      <h2>Xin chào Admin</h2>
+  <a href="http://localhost:5173/">    <h2>Xin chào Admin</h2></a>
     </div>
   );
 };
