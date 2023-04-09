@@ -8,10 +8,9 @@ const Header = () => {
             <div className="pl-40 ">
                 <a href="/login"
                     className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"><button>Login</button></a>
-                <a href="/signin"
+                <a href="/signup"
                     className="inline-block text-sm px-4 py-2 ml-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"><button>Sign In</button></a>
-                <a href="/admin"
-                    className="inline-block text-sm px-4 py-2 ml-4 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"><button>Admin</button></a>
+
             </div>
         </div>
 

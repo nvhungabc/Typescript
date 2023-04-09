@@ -21,11 +21,11 @@ const Footer = () => {
                         Phương thức thanh toán
                     </p>
                     <div className="grid grid-cols-4 mb-4">
-                        <img src="./footer1.png" alt="" />
-                        <img src="./footer2.png" alt="" />
-                        <img src="./footer3.png" alt="" />
-                        <img src="./footer4.png" alt="" />
-                        <img className="mt-4" src="./footer5.png" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img src="" alt="" />
+                        <img className="mt-4" src="" alt="" />
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
                     </p>
                     <p className="mb-1">
                         <a href="#" className="text-lg hover:underline hover:text-red-500">
-                            <img src="./footer6.png" alt="" />
+                            <img src="" alt="" />
                         </a>
                     </p>
                 </div>

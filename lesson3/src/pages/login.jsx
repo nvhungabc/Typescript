@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { AddProjects } from "../../api/projects"
+import { AddProjects } from "../api/projects"
 import { Router } from "react-router-dom"
 const Login = () => {
     const [data, setdata] = useState([])

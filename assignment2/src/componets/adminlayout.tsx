@@ -19,6 +19,5 @@ const AdminLayout = (props: Props) => {
             </div>
         </div>
     );
-
 };
 export default AdminLayout;

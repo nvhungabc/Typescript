@@ -22,12 +22,15 @@ const Dashbroad = () => {
     }
   }
   const handlRomve = async (id: string | number) => {
-    RemoveProduct(id).then(() => {
-      setProducts(products.filter((products) => products.id != id))
-    }).catch((err) => {
-      console.log(err.error);
-
-    })
+    if(confirm("Bạn có chắc muốn xóa không")){
+      RemoveProduct(id).then(() => {
+        setProducts(products.filter((products) => products.id != id))
+      })
+      .catch((err) => {
+        console.log(err.error);
+  
+      })
+    }
   }
 
   useEffect(() => {
@@ -63,12 +66,12 @@ const Dashbroad = () => {
                     <td className="whitespace-nowrap px-6 py-4 font-medium">{index + 1}</td>
                     <td className="whitespace-nowrap px-6 py-4">{products.name}</td>
                     <td className="whitespace-nowrap px-6 py-4"> <Image
-                      src={products.images[0].base_url}
+                      src={products.images?.[0]?.base_url}
                     /></td>
                     <td className="whitespace-nowrap px-6 py-4">{products.price.toLocaleString()}</td>
                     <td className="whitespace-nowrap px-6 py-4">{products.original_price.toLocaleString()}</td>
                     <td className="whitespace-nowrap px-6 py-4">{products.price}</td>
-                    <td className="whitespace-nowrap px-6 py-4"><button onClick={() => handlRomve(products.id)} data-name="${projects.name}" data-id="${projects.id}" className="bg-blue-500 text-white hover:bg-blue-700 btn-remove border-0 p-2 rounded-md mx-1">
+                    <td className="whitespace-nowrap px-6 py-4"><button onClick={() => handlRomve(products.id)} data-name="${projects.name}" data-id="${projects.id}" className="bg-blue-500 text-white hover:bg-blue-700 btn-remove border-0 p-2 rounded-md mx-1 ">
                       Remove
                     </button></td>
                     <td className="whitespace-nowrap px-6 py-4">  <button data-name="${projects.name}" className="bg-green-500 hover:bg-green-600 text-white btn-update border-0 p-2  rounded-md mx-1">

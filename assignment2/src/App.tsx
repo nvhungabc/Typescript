@@ -4,7 +4,7 @@ import UserLayout from './componets/user'
 import Home from './pages/user/home'
 import Products_detail from './pages/user/detail'
 import Login from './pages/user/login'
-import Signin from './pages/user/signin'
+import Signup from './pages/user/signup'
 import Dashbroad from './pages/admin/dashbroad'
 import Add from './pages/admin/add'
 import Update from './pages/admin/update'
@@ -22,7 +22,7 @@ function App() {
         <Route path='edit-products/:id' element={<Update />} />
       </Route>
       <Route path='/login' element={<Login />}></Route>
-      <Route path='/signin' element={<Signin />}></Route>
+      <Route path='/signup' element={<Signup />}></Route>
     </Routes>
   </BrowserRouter>
 }

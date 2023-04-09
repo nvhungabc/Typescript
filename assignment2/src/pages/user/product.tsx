@@ -5,18 +5,15 @@ type Props = {
 }
 
 const Products = ({ data }: Props) => {
-    // console.log(data.images[1].base_url)
     return <Link to={"products-detail/" + data.id} className="block">
         <div className="w-full max-w-sm  ">
-
-            <img className="p-8 rounded-t-lg" src={data.images[1].base_url} alt="product image" />
+            <img className="p-8 rounded-t-lg" src={data.images?.[0]?.base_url} alt="product image" />
 
             <div className="px-5 pb-5">
                 <a href="#">
                     {/* Tên sản phẩm */}
                     <h5 className="text-sm  font-normal tracking-tight text-gray-900 dark:text-white ">{data.name}</h5>
                 </a>
-
                 <div className="flex items-center ">
                     {/* Giá sản phẩm */}
                     <span className=" text-base font-bold text-red-500 dark:text-red-500">{data.price.toLocaleString()} đ</span>

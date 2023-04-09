@@ -1,35 +1,35 @@
-import { useState,useEffect } from "react";
-const Counter = () => {
-    const [counter, setCounter] = useState(0)
-    const [image, setImage] = useState(null)
+// import { useState,useEffect } from "react";
+// const Counter = () => {
+//     const [counter, setCounter] = useState(0)
+//     const [image, setImage] = useState(null)
 
-    // setCounter(counter + 1)
+//     // setCounter(counter + 1)
 
-    const handleShowImage = async () => {
-        const {url} = await fetch('https://picsum.photos/200/300')
-        setImage(url)
-        // setImage()
-    }
+//     const handleShowImage = async () => {
+//         const {url} = await fetch('https://picsum.photos/200/300')
+//         setImage(url)
+//         // setImage()
+//     }
 
 
 
-    useEffect(() => {
-        handleShowImage()
-        // const interval = setInterval(() => {
-        //     setCounter(counter + 1)
-        // }, 1000)
+//     useEffect(() => {
+//         handleShowImage()
+//         // const interval = setInterval(() => {
+//         //     setCounter(counter + 1)
+//         // }, 1000)
 
-        // return () => clearInterval(interval)
-    }, [counter]) // Chứa các tham số mà useEffect phụ thuộc
-    console.log(counter);
+//         // return () => clearInterval(interval)
+//     }, [counter]) // Chứa các tham số mà useEffect phụ thuộc
+//     console.log(counter);
 
-    return <>
-        <h1>Counter: {counter}</h1>
-        <img src={image} alt="" />
-        <button
-            className="bg-blue-400"
-            onClick={() => setCounter(counter + 1)}>+ Counter</button>
-    </>
-}
+//     return <>
+//         <h1>Counter: {counter}</h1>
+//         <img src={image} alt="" />
+//         <button
+//             className="bg-blue-400"
+//             onClick={() => setCounter(counter + 1)}>+ Counter</button>
+//     </>
+// }
 
-export default Counter
+// export default Counter
