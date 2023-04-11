@@ -1,4 +1,7 @@
+import { useLocalStorage } from "../../hooks"
+
 const Header = () => {
+    // const [user,setuser]=useLocalStorage('user',null)
     return <header className="bg-red-500">
         <div className="container w-3/4  h-[64px] mx-auto flex items-center gap-7">
             <a href="/">      <img className="w-[64px] pl-1" src="/logo.png" alt="" /></a>

@@ -7,6 +7,20 @@
       "confirmPassword": "123456",
       "id": 1,
       "role": 1
+    },
+    {
+      "email": "loan@hi.com",
+      "password": "$2a$10$PWfjqZkKm5/czD5WqhLznedpCzSHVcVRyM7tpqthlYaMR9gIOHnu2",
+      "Name": "Nguyễn Văn Hưng",
+      "confirmPassword": "123456",
+      "id": 2
+    },
+    {
+      "email": "hn3399402@gmail.comkjhgfds",
+      "password": "$2a$10$80gob0lMR7BO7/GyNkIa..45sRwmq2WH5afwIpYIx47qvk5qo3tZa",
+      "Name": "a",
+      "confirmPassword": "111111",
+      "id": 3
     }
   ],
   "products": [
@@ -34,9 +48,9 @@
           "thumbnail_url": "https://salt.tikicdn.com/cache/200x280/ts/product/89/0b/da/b8124e465e0585ba3d8f36a5bf9b4d0d.jpg"
         }
       ],
-      "original_price": 33989996,
+      "original_price": 33989990,
       "price": 27750000,
-      "name": "iPhone 14 Pro Max",
+      "name": "iPhone 14 Pro Maxx",
       "id": 2,
       "brand": {
         "id": 17827,

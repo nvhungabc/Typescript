@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 const AddProducts_Admin = () => {
+    
     return <>
         <div className="flex flex-col md:flex-row w-full">
             <div className="md:w-2/5 p-4">
